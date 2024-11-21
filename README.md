@@ -34,20 +34,58 @@ For precise PWM control of the brushed motors, BoxTurtle relies on a custom MCU,
 ## Material Settings
 ![Orca_Material_Settings](https://github.com/user-attachments/assets/a1569e5a-24c5-48f9-98fb-26465bf7c75c)
 ## Ramming Settings
-![Orca_Matterial_Settings](https://github.com/user-attachments/assets/2744fb86-afae-4645-9215-3f8507558509)
+![Orca_Ramming_Settings](https://github.com/user-attachments/assets/2744fb86-afae-4645-9215-3f8507558509)
+## Add Multiple Filaments
+![Orca_Add_Filament_Settings](https://github.com/user-attachments/assets/61fb26a4-57c6-4624-8435-478d719a01ae)
 
 ## Printer Machine G-Code
 ```
 M104 S0 ; Stops OS from sending temp waits separately
 M140 S0
-PRINT_START EXTRUDER=[nozzle_temperature_initial_layer] BED=[bed_temperature_initial_layer_single] Chamber=[chamber_temperature] PRINT_MIN={first_layer_print_min[0]},{first_layer_print_min[1]} PRINT_MAX={first_layer_print_max[0]},{first_layer_print_max[1]} TOOL={initial_tool}
+PRINT_START EXTRUDER=[nozzle_temperature_initial_layer] BED=[bed_temperature_initial_layer_single] TOOL={initial_tool}
 ```
 ## Change Filament G-Code
 ```
 T[next_extruder]
 ```
+## Example PRINT_START macro
+#### *Please note this is just an example macro to show how to incorporate the initial tool into your print start macro. Please adjust it to match your printer setup.*
+```
+[gcode_macro PRINT_START]
+gcode:
+  {% set BED_TEMP = params.BED|default(60)|float %}
+  {% set EXTRUDER_TEMP = params.EXTRUDER|default(195)|float %}
+  {% set S_EXTRUDER_TEMP = 150|float %}
+  {% set initial_tool = params.TOOL|int %}
 
-## BoxTurtle sourcing/vendors
+  G90 ; use absolute coordinates
+  M83 ; extruder relative mode
+  
+  G28 # Home Printer
+  # Do any other leveling such as QGL here
+
+  AFC_PARK
+
+  M140 S{BED_TEMP} # Set bed temp
+  M109 S{EXTRUDER_TEMP} # wait for extruder temp
+  T{initial_tool} #Load Initial Tool
+  
+  M104 S{S_EXTRUDER_TEMP} # set standby extruder temp
+  M190 S{BED_TEMP} # wait for bed temp
+    
+  G28 Z
+
+  # Bedmesh or load bedmesh
+
+  AFC_PARK
+  M109 S{EXTRUDER_TEMP} ; wait for extruder temp
+  
+  # Add any pre print prime/purge line here
+  # Start Print
+```
+
+
+# BoxTurtle sourcing/vendors
 While BoxTurtle can be mostly self-sourced, some vendors offer partial or full BoxTurtle kits. These vendors also have dedicated channels on the Armored Turtle Discord.
 
 US:
@@ -69,6 +107,6 @@ UK:
 AU:
 - [DREMC](https://store.dremc.com.au/products/ldo-box-turtle-hardware-kit)
   
-## Merch
+# Merch
 - BoxTurtle T-Shirt ($3 from each sale goes to support ArmoredTurtle) via [Cotton Bureau](https://cottonbureau.com/p/QKF5XC/shirt/colored-box-turtle#/26921844/tee-men-premium-lightweight-vintage-black-tri-blend-s)- also has sweatshirt/hoodie variants
 - BoxTurtle Sticker via [Dr. Mursey](https://drmursey.myshopify.com/products/box-turtle)
