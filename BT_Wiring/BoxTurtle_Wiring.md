@@ -44,7 +44,7 @@ Lane 4  = rightmost filament lane
 ## Extruder (LOAD) sensors
 | Lane | Component | Recommended Wire Length | Recommended Wire Gauge | Connector |
 | ---- | ----------- | --------- | ------------| --------- |
-| Lane 1 | [D2HW-C201]([D2HW-C201H.png) | 200mm | 24ga | JST-XH-3 |
+| Lane 1 | [D2HW-C201](D2HW-C201H.png) | 200mm | 24ga | JST-XH-3 |
 | Lane 2 | [D2HW-C201](D2HW-C201H.png) | 310mm | 24ga | JST-XH-3 |
 | Lane 3 | [D2HW-C201](D2HW-C201H.png) | 410mm | 24ga | JST-XH-3 |
 | Lane 4 | [D2HW-C201](D2HW-C201H.png) | 465mm | 24ga | JST-XH-3 |
