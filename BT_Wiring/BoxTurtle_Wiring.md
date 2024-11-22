@@ -28,10 +28,10 @@ Lane 4  = rightmost filament lane
 ##  N20 motors for Respoolers
 | Lane | Component | Wire Length | Wire Gauge | Connector |
 | ---- | ----------- | --------- | ------------| --------- |
-| Lane 1 | N20 6V 500RPM](BT_Wiring/N20_6V_500RPM.png) | 205mm | 24ga | JST-XH-2 |
-| Lane 2 | N20 6V 500RPM](BT_Wiring/N20_6V_500RPM.png) | 315mm | 24ga | JST-XH-2 |
-| Lane 3 | N20 6V 500RPM]([BT_Wiring/N20_6V_500RPM.png) | 415mm | 24ga | JST-XH-2 |
-| Lane 4 | N20 6V 500RPM](BT_Wiring/N20_6V_500RPM.png) | 515mm | 24ga | JST-XH-2 |
+| Lane 1 | [N20 6V 500RPM](BT_Wiring/N20_6V_500RPM.png) | 205mm | 24ga | JST-XH-2 |
+| Lane 2 | [N20 6V 500RPM](BT_Wiring/N20_6V_500RPM.png) | 315mm | 24ga | JST-XH-2 |
+| Lane 3 | [N20 6V 500RPM](BT_Wiring/N20_6V_500RPM.png) | 415mm | 24ga | JST-XH-2 |
+| Lane 4 | [N20 6V 500RPM](BT_Wiring/N20_6V_500RPM.png) | 515mm | 24ga | JST-XH-2 |
 
 ## Trigger (PREP) sensors
 | Lane | Component | Wire Length | Wire Gauge | Connector |
