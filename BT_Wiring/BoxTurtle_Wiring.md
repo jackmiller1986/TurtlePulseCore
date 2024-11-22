@@ -23,7 +23,7 @@ Lane 4  = rightmost filament lane
 | Lane 2 | [WS2812 PCB](WS2812_PCB.png) | 130mm/130mm tail | 24-30ga | [JST-SM-M](JST-XH_JST-SM.png)/JST-SM-F |
 | Lane 3 | [WS2812 PCB](WS2812_PCB.png) | 130mm/130mm tail | 24-30ga | [JST-SM-M](JST-XH_JST-SM.png)/JST-SM-F |
 | Lane 4 | [WS2812 PCB](WS2812_PCB.png) | 130mm/130mm tail | 24-30ga | [JST-SM-M](JST-XH_JST-SM.png)/JST-SM-F |
-| Jumper | 80mm | 24-30ga | JST-XH-3/JST-SM-F |
+| Jumper | |  80mm | 24-30ga | JST-XH-3/JST-SM-F |
 
 ##  N20 motors for Respoolers
 | Lane | Component | Wire Length | Wire Gauge | Connector |
