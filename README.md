@@ -26,6 +26,8 @@ For precise PWM control of the brushed motors, BoxTurtle relies on a custom MCU,
 
 ![BoxTurtle_AFC-Lite_Pinout](https://github.com/user-attachments/assets/134796f6-8458-4a61-9967-1292963d7b4b)
 
+Refer to [BT_Wiring/BoxTurtle_Wiring.xlsx](BT_Wiring/BoxTurtle_Wiring.xlsx) for recommended wire lengths for each lane.
+
 # Slicer configuration
 
 [Orca Slicer](https://github.com/SoftFever/OrcaSlicer) is the preferred slicer for BoxTurtle use.
