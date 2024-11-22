@@ -57,4 +57,4 @@ Lane 4  = rightmost filament lane
 ## TurtleNeck (optional, not required)
 | Component | Recommended Wire Length | Recommended Wire Gauge | Connector | Notes |
 | ----------- | --------- | ------------| --------- | ---- |
-| [D2F-L w/ Lever](TN_D2L_500_X2.png)  | 500mm | 24ga | JST-XH-3 | Quantity two required |
+| [D2F-L w/ Lever](TN_D2L_500_X2.png)  | 500mm | 24ga | JST-XH-3 | Quantity 2 |
