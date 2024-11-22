@@ -2,7 +2,7 @@
 
 ## Lane numbering
 
-Lane 1 = leftmost filament lane
+Lane 1 = leftmost filament lane\
 Lane 4  = rightmost filament lane
 
 ## AFC-Lite Wiring guide
