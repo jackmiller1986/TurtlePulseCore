@@ -6,7 +6,7 @@ Lane 1 = leftmost filament lane
 Lane 4  = rightmost filament lane
 
 ## AFC-Lite Wiring guide
-!(AFC-Wiring)[BT_Wiring/BoxTurtle_AFC-Lite_Pinout.png]
+![BoxTurtle_AFC-Lite_Pinout](https://github.com/user-attachments/assets/134796f6-8458-4a61-9967-1292963d7b4b)
 
 ## Extruder Steppers
 | Lane | Wire Length | Wire Gauge | Connector |
