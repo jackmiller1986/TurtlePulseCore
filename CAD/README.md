@@ -1,0 +1,1 @@
+Due to size limitations, the .step/.f3z files are stored in Git-LFS, and are not included in .zip downloads of the repository.  Download them individually or clone via the Git CLI for them to open properly in CAD software.
