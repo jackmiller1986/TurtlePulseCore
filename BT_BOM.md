@@ -17,8 +17,7 @@ RGBW LED PCB (WS2812) | 4 | | https://www.aliexpress.us/item/3256801785673787.ht
 N20 6v / 500RPM motors | 4 | | https://www.aliexpress.us/item/2251832836005412.html\ https://store.isiks.tech/products/bt-n20-motors |
 D2F-L (with Lever) | 4 | |
 D2HW-C201H | 5 | | 
-3010 Axial Fan 5v | 1 | Optional | https://www.aliexpress.us/item/3256802884825067.
-html
+3010 Axial Fan 5v | 1 | Optional | https://www.aliexpress.us/item/3256802884825067.html
 
 ## Bearings
 | Item | Quantity | Notes | Links |
