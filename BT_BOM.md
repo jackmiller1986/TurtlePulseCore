@@ -31,7 +31,7 @@ D2HW-C201H | 5 | |
 | M2x10 Self-tapping screw | 8 | |
 | M3x16 BHCS | 4 | Only if using fan |
 | M3x30 BHCS | 4 | |
-| M3x6 SHCS | 8 | |
+| M3x6 SHCS | 24 | |
 | M3x8 SHCS | 78 | |
 | M3x10 SHCS | 16 | |
 | M3 threaded heatset insert | 70 | |
