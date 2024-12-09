@@ -6,6 +6,10 @@ Lane 1 = leftmost filament lane\
 Lane 4  = rightmost filament lane
 
 ## AFC-Lite Wiring guide
+
+Prep = Trigger Filament Sensor Switches\
+Load = Extruder Filament Sensor Switches
+
 ![BoxTurtle_AFC-Lite_Pinout](https://github.com/user-attachments/assets/e5673f3d-611a-4a90-8ea7-614f6e67fffc)
 
 
