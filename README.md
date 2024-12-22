@@ -55,12 +55,16 @@ Refer to [BT_Wiring/BoxTurtle_Wiring.xlsx](BT_Wiring/BoxTurtle_Wiring.xlsx) or [
 [Orca Slicer](https://github.com/SoftFever/OrcaSlicer) is the preferred slicer for BoxTurtle use.
 ## Printer Settings
 ![Orca_Pinter_Settings](https://github.com/user-attachments/assets/1aa56051-dbbf-49a4-b818-368e00406b17)
-## Material Settings
-![Orca_Material_Settings](https://github.com/user-attachments/assets/a1569e5a-24c5-48f9-98fb-26465bf7c75c)
-## Ramming Settings
-![Orca_Ramming_Settings](https://github.com/user-attachments/assets/2744fb86-afae-4645-9215-3f8507558509)
 ## Add Multiple Filaments
 ![Orca_Add_Filament_Settings](https://github.com/user-attachments/assets/61fb26a4-57c6-4624-8435-478d719a01ae)
+
+## Additional Slicer configuration - pre-OrcaSlicer 2.2.0
+Configuring per-material filament ramming is no longer required as of the official OrcaSlicer 2.2.0 release (PR [#6934](https://github.com/SoftFever/OrcaSlicer/pull/6934)).  If you are on an earlier version than that (including betas/release candidates) you will need to make the following additional changes to your slicer configurations.
+### Material Settings
+![Orca_Material_Settings](https://github.com/user-attachments/assets/a1569e5a-24c5-48f9-98fb-26465bf7c75c)
+### Ramming Settings
+![Orca_Ramming_Settings](https://github.com/user-attachments/assets/2744fb86-afae-4645-9215-3f8507558509)
+
 
 ## Printer Machine G-Code
 ```
