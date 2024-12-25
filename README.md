@@ -47,8 +47,8 @@ Refer to [BT_Wiring/BoxTurtle_Wiring.xlsx](BT_Wiring/BoxTurtle_Wiring.xlsx) or [
 |-----------|---------------|----------------|--------|--------|
 | Feeders to Trigger | 4mm | 3mm | 50mm | Quantity 4 ; use PTFE cutter jig |
 | Trigger to Extruder | 4mm | 3mm | 80mm | Quantity 4 ; use PTFE cutter jig |
-| Extruder to Hub (Outer lanes) | 4mm | 2mm | 160mm | Quantity 2; 3mm ID will blow out. A chamfer is recommended on the extruder end. |
-| Extruder to Hub (Inner lanes) | 4mm | 2mm | 85mm | Quantity 2; 3mm ID will blow out. A chamfer is recommended on the extruder end. |
+| Extruder to Hub (Outer lanes) | 4mm | 2mm | 171mm | Quantity 2; 3mm ID will blow out. A chamfer is recommended on each end. |
+| Extruder to Hub (Inner lanes) | 4mm | 2mm | 101mm | Quantity 2; 3mm ID will blow out. A chamfer is recommended on each end. |
 
 # Slicer configuration
 
