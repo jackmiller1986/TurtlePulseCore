@@ -73,6 +73,7 @@ Configuring per-material filament ramming is no longer required as of the offici
 ### Material Settings
 ![Orca_Material_Settings](https://github.com/user-attachments/assets/a1569e5a-24c5-48f9-98fb-26465bf7c75c)
 ### Ramming Settings
+Because the AFC-Klipper-Add-On handles any tip forming in the extension, we need to disable these specific settings in the slicer software.  Below is a screenshot for OrcaSlicer, but most Slic3r-based slicers have a similar dialog/setting.
 ![Orca_Ramming_Settings](https://github.com/user-attachments/assets/2744fb86-afae-4645-9215-3f8507558509)
 
 ## Example PRINT_START macro
