@@ -17,27 +17,58 @@ BoxTurtle is an automated, lane-based filament changing system, also known by so
 To accommodate any differences in rotation distance between the extruder in the tool head and the lane motors, BoxTurtle uses a toolhead buffer, like [TurtleNeck](https://github.com/ArmoredTurtle/TurtleNeck) by ArmoredTurtle. This system is "bufferless," meaning no filament boxes (no spaghetti boxes) are required, similar to the AMS. Each lane features an independent respooler equipped with a brushed motor, which helps rewind the spool and assists the lane motor in feeding the filament smoothly. This prevents issues like spool tangling or "bucking."
 
 For precise PWM control of the brushed motors, BoxTurtle relies on a custom MCU, AFC-lite, developed by [Isik's Tech @xbst](https://github.com/xbst/AFC-Lite/) 
+
+# For best results
+
+## AFC Klipper Add-On
+BoxTurtle was designed in tandem to work with the [AFC Klipper Add-On](https://github.com/ArmoredTurtle/AFC-Klipper-Add-On). For information on installing and configuring the AFC Klipper Add-On, please visit that repository for the most comprehensive detail. Most common configuration options are prompted for during the installation process.  Some of the options presented are covered below at a high level.
+
+## Filament cutter or tip forming?
+BoxTurtle works most reliably with a toolhead filament cutter. Our recommended toolhead cutter solution is [FilamATrix](https://github.com/thunderkeys/FilamATrix). Please visit that Github repository for the most up to date instructions and information. Ensure that toolhead cutting is selected during installing the AFC Klipper Add-On, or enable it manually by editing ``AFC/AFC.cfg`` and restarting Klipper.
+
+If a toolhead filament cutter is not a possibility, tip forming is also an option. This is enabled via the installation script or by editing ``AFC/AFC.cfg`` and restarting Klipper. Tip forming is extremely dependent on your printer, filament and even environment and guidance on properly tuning this is outside the scope of this document. Please visit the [ArmoredTurtle Discord](https://discord.gg/eT8zc3bvPR) for community support on tip forming.
+
+## Filament sensor
+A pre-extruder toolhead filament sensor is recommended but not required if using a [TurtleNeck](https://github.com/ArmoredTurtle/TurtleNeck) or [TurtleNeck 2](https://github.com/ArmoredTurtle/TurtleNeck2.0) filament buffer. A post-extruder filament sensor can be defined in the AFC configurations, but is not currently used beyond reporting status of the sensor.
+
+Options include:
+
+- [FilamATrix](https://github.com/thunderkeys/FilamATrix)
+- [Filatector](https://github.com/ArmoredTurtle/Filatector)
+- [AFC Buffer Ram Sensor using TurtleNeck](https://github.com/ArmoredTurtle/AFC-Klipper-Add-On/blob/main/docs/Buffer_Ram_Sensor.md)
+
+## Waste management
+
+### Pooping, Kicking, and Wiping?
+One option for filament purge/waste can be to have the printer 'poop' blobs of filament on the bed, have the nozzle cleaned with a brush/wipe, and hten return the toolhead near the blob and kick off the bed using kinematics into a bucket or other waste evacuation system. This works similar to the method used by [Blobifier](https://github.com/Dendrowen/Blobifier), but does not require servo actuation.  Enabling poop/kick/wipe macros can result in more reliable filament changes and color separation, at the cost of additional time during each filament swap. Each option can be enabled or disabled during the AFC installation process, or by editing ``AFC/AFC.cfg`` and restarting Klipper.
+
+### Prime towers
+Filament prime towers can be used standalone, or in combination with the above to minimize the chance that no blobs or oozes from the filament change process make it on to your final print. However, if you are using pooping as described above, you likely need far less purging than the default slicer settings suggest. You can adjust the 'flushing volumes' in most slicers, as well as the size of your prime/purge tower. A decent starting setting for these might be a flushing volume multiplier of 0.1-0.2 and a tower width size of 20mm.
+
+If you want to rely solely on the poop purge, a static size wipe tower can be set by disabling the 'Purge into Prime Tower' setting in your slicer software's "Printer Settings".
+
+Different filament color transitions will require different purge volumes, and thus tuning this is highly dependent on your filaments and prints you are performing.
+
 # Enclosure
 
-The enclosure option for box turtle has been moved to it's [own repository](https://github.com/ArmoredTurtle/BoxTurtle-Enclosure-).
+The enclosure option for BoxTurtle has been moved to its [own repository](https://github.com/ArmoredTurtle/BoxTurtle-Enclosure-). The enclosure is still under development, but the most up to date information on it can be found at that repository. Also considering [joining the ArmoredTurtle Discord](https://discord.gg/eT8zc3bvPR) to get progress updates as development progresses.
 
 # Manual
 
-Armored Turtle's project manuals are hosted [here](https://armoredturtle.xyz). There is no PDF, this is intended to make the build experience as easy as possible.
+ArmoredTurtle's project manuals are hosted [here](https://armoredturtle.xyz). There is no PDF, this is intended to make the build experience as easy as possible.
 [BoxTurtle Assembly Manual](https://armoredturtle.xyz/manual-sections.html?manual=boxturtle)
 
 # Printed Parts
 
 If you purchased a kit, all of the parts you need to print are located in the [Base_Build](https://github.com/ArmoredTurtle/BoxTurtle/tree/main/STLs/Base_Build) folder under STLs on this repository. There is also a [web-based configurator](https://armoredturtle.xyz/stl-configurator.html) available for easy identification and download of what STLs to print outside of a base kit build.
 
-This is NOT a [VORON Design](https://vorondesign.com) project, we strongly recommend that you run a profile out specific to BoxTurtle. Voron parts profiles are not recommended.
+This is NOT a [VORON Design](https://vorondesign.com) project, we strongly recommend that you run a profile that is specific to BoxTurtle. Voron parts profiles are not recommended for BoxTurtle printed parts.
 
 There is a calibration print that you may like to print before getting started [here](https://www.printables.com/model/1004303-box-turtle-calibration-fidget).
 
 # Wiring
 
 ![BoxTurtle_AFC-Lite_Pinout](https://github.com/user-attachments/assets/59a0e1d9-f870-4c50-a056-59aa76489e71)
-
 
 Refer to [BT_Wiring/BoxTurtle_Wiring.xlsx](BT_Wiring/BoxTurtle_Wiring.xlsx) or [BT_Wiring/BoxTurtle-Wiring.md](BT_Wiring/BoxTurtle_Wiring.md) for recommended wire lengths for each lane.
 
@@ -52,7 +83,7 @@ Refer to [BT_Wiring/BoxTurtle_Wiring.xlsx](BT_Wiring/BoxTurtle_Wiring.xlsx) or [
 
 # Slicer configuration
 
-[Orca Slicer](https://github.com/SoftFever/OrcaSlicer) is the preferred slicer for BoxTurtle use.
+[Orca Slicer](https://github.com/SoftFever/OrcaSlicer) is the preferred and recommended slicer for BoxTurtle and AFC.
 ## Printer Settings
 ![Orca_Pinter_Settings](https://github.com/user-attachments/assets/1aa56051-dbbf-49a4-b818-368e00406b17)
 ## Add Multiple Filaments
@@ -60,8 +91,8 @@ Refer to [BT_Wiring/BoxTurtle_Wiring.xlsx](BT_Wiring/BoxTurtle_Wiring.xlsx) or [
 
 ## Printer Machine G-Code
 ```
-M104 S0 ; Stops OS from sending temp waits separately
-M140 S0
+M104 S0 ; Stops OrcaSlicer from sending temperature waits separately
+M140 S0 ; Stops OrcaSlicer from sending temperature waits separately
 PRINT_START EXTRUDER=[nozzle_temperature_initial_layer] BED=[bed_temperature_initial_layer_single] TOOL={initial_tool}
 ```
 ## Change Filament G-Code
