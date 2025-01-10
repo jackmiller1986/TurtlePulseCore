@@ -55,7 +55,7 @@ D2HW-C201H | 5 | |
 ## TN Buffer BOM
 | Item | Quantity | Notes | Links |
 |------|----------|-------|-------|
-| DF2-L (With Lever) | 2 | |
+| D2F-L (With Lever) | 2 | |
 | M2x10 Self-tapping screw | 4 | |
 | M3x8 SHCS | 4 | |
 | M3 threaded heatset insert | 4 | |
