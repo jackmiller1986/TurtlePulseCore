@@ -70,7 +70,7 @@ There is a calibration print that you may like to print before getting started [
 
 ![BoxTurtle_AFC-Lite_Pinout](https://github.com/user-attachments/assets/59a0e1d9-f870-4c50-a056-59aa76489e71)
 
-Refer to [BT_Wiring/BoxTurtle_Wiring.xlsx](BT_Wiring/BoxTurtle_Wiring.xlsx) or [BT_Wiring/BoxTurtle-Wiring.md](BT_Wiring/BoxTurtle_Wiring.md) for recommended wire lengths for each lane.
+Refer to [BT_Wiring/BoxTurtle_Wiring.xlsx](BT_Wiring/BoxTurtle_Wiring.xlsx) or [BT_Wiring/README.md](BT_Wiring/README.md) for recommended wire lengths for each lane.
 
 # PTFE sizes/lengths
 
