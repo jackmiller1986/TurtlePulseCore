@@ -1,5 +1,5 @@
 # BoxTurtle V1.0
-BoxTurtle Automated Filament Changer (requires AFC-Klipper-Add-On (Beta))
+BoxTurtle Automated Filament Control (requires AFC-Klipper-Add-On (Beta))
 
 ![BT_Render](https://github.com/user-attachments/assets/c06e961f-8d1d-41ae-9c80-036669ba2657)
 [![Join me on Discord](https://discord.com/api/guilds/1229586267671629945/widget.png?style=banner2)](https://discord.gg/eT8zc3bvPR)
