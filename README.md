@@ -65,7 +65,7 @@ If you purchased a kit, all of the parts you need to print are located in the [B
 If you have an LDO BoxTurtle kit, these are the options to pick on the web-based configurator:
 
 - ``Would you like normal or monolithic skirts?`` - your choice.  If you can fit monolithic on your printer, it has a more unified look vs the split parts, but it's going to require minimum 300mm bed (probably 305x305).  If you want them meshed you can either set top/bottom layers to 0 for the whole model, or you can do a height range modifier up to 3.6mm.
-- ``Would you prefer a hbu or pass through skirts?`` - Hub is our recommended default choice.
+- ``Would you prefer a hub or pass through skirts?`` - Hub is our recommended default choice.
 - ``Are you using printed corners or extrusion corners?`` - Printed corners
 - ``LED corners or plain?`` - Plain
 - ``Are you using D2F or D2HW style switches?`` - D2HW
