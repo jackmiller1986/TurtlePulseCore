@@ -51,7 +51,7 @@ Different filament color transitions will require different purge volumes, and t
 
 # Enclosure
 
-The enclosure option for BoxTurtle has been moved to its [own repository](https://github.com/ArmoredTurtle/BoxTurtle-Enclosure-). The enclosure is still under development, but the most up to date information on it can be found at that repository. Also considering [joining the ArmoredTurtle Discord](https://discord.gg/eT8zc3bvPR) to get progress updates as development progresses.
+The enclosure option for BoxTurtle has been moved to its [own repository](https://github.com/ArmoredTurtle/BoxTurtle-Enclosure-). The enclosure is still [under development](https://www.youtube.com/watch?v=Jjgi8q28Y2o), but the most up to date information on it can be found at that repository. Also considering [joining the ArmoredTurtle Discord](https://discord.gg/eT8zc3bvPR) to get progress updates as development progresses.
 
 # Manual
 
@@ -70,8 +70,8 @@ If you have an LDO BoxTurtle kit, these are the options to pick on the web-based
 - ``LED corners or plain?`` - Plain
 - ``Are you using D2F or D2HW style switches?`` - D2HW
 - ``Are you using an AFC-Lite or BTT MMB/Mosfetti board?`` - AFC-Lite
-- ``Would you like to print the Hardware or No-Hardware version of the trays?`` - Choose No Hardware if you have a minimum 235x235mm bed.  Some enders are max 220x220mm and so the 'bars' that slot into the extrusion require hardware (heatsets/screws) to attach to the tray.
-- ``What style tray would you like to print? Plain, Inlay, Multicolor, or Desiccant?`` - Again, a bit of personal choice.  Plain would be the base option, but there's no reason you couldn't print the others.  An enclosure is in the works so if you wanted to future proof for that, desiccant trays are available (in two sizes).
+- ``Would you like to print the Hardware or No-Hardware version of the trays?`` - Choose No Hardware if you have a minimum 235x235mm bed.  Some Ender-style printers have a maximum 220x220mm printable voluem, and so the 'bars' that slot into the extrusion require hardware (heatsets/screws) to attach to the tray.
+- ``What style tray would you like to print? Plain, Inlay, Multicolor, or Desiccant?`` - Again, a bit of personal choice.  Plain would be the base option, but there's no reason you couldn't print the others.  An enclosure is [in the works](https://www.youtube.com/watch?v=Jjgi8q28Y2o) so if you wanted to future proof for that, desiccant trays are available (in two sizes).
 - ``Would you like to print a TurtleNeck buffer?`` - Yes
 
 If all of the above sounds a bit overwhelming, you can print all of the parts in [LDO_BoxTurtle_Kit_STLs.zip]((https://github.com/ArmoredTurtle/BoxTurtle/tree/main/STLs/STLs/LDO_BoxTurtle_Kit_STLs.zip) and they will be the right ones to build a functioning BoxTurtle.
