@@ -64,7 +64,7 @@ If you purchased a kit, all of the parts you need to print are located in the [B
 
 If you have an LDO BoxTurtle kit, these are the options to pick on the web-based configurator:
 
-- ``Would you like normal or monolithic skirts?`` - your choice.  If you can fit monolithic on your printer, it has a more unified look vs the split parts, but it's going to require minimum 300mm bed (probably 305x305).  If you want them meshed you can either set top/bottom layers to 0 for the whole model, or you can do a height range modifier up to 3.6mm.
+- ``Would you like normal or monolithic skirts?`` - your choice.  If you can fit monolithic on your printer, it has a more unified look vs the split parts. We recommend a 350mm minimum size bed for this, but you may be able to get them to squeak in on a ~300-305mm plate.
 - ``Would you prefer a hub or pass through skirts?`` - Hub is our recommended default choice.
 - ``Are you using printed corners or extrusion corners?`` - Printed corners
 - ``LED corners or plain?`` - Plain
@@ -80,11 +80,17 @@ This is NOT a [VORON Design](https://vorondesign.com) project, we strongly recom
 
 There is a calibration print that you may like to print before getting started [here](https://www.printables.com/model/1004303-box-turtle-calibration-fidget).
 
-# Wiring
+# How to create a meshed look on the skirts
+There are a few ways to create a 'meshed' look on the hexes on the skirts, using your slicer.
 
+- On the print settings profile, set top and bottom layers to 0.  Adjust infill pattern, density and angle to suit your preference.
+- You can also do a height range modifier on the part from 0-3.6mm to set top/bottom layers to 0, and infill pattern, desnity and angle to suit your preference.
+- If you would like a different color for the hexes, you can do a color swap at layer 19 (3.8mm with 0.2mm layer heights).
+
+# Wiring
 ![BoxTurtle_AFC-Lite_Pinout](https://github.com/user-attachments/assets/59a0e1d9-f870-4c50-a056-59aa76489e71)
 
-Refer to [BT_Wiring/BoxTurtle_Wiring.xlsx](BT_Wiring/BoxTurtle_Wiring.xlsx) or [BT_Wiring/README.md](BT_Wiring/README.md) for recommended wire lengths for each lane.
+Refer to [BT_Wiring/README.md](BT_Wiring/README.md) for recommended wire lengths for each lane.
 
 # PTFE sizes/lengths
 
@@ -160,6 +166,8 @@ gcode:
 
 # BoxTurtle sourcing/vendors
 While BoxTurtle can be mostly self-sourced, some vendors offer partial or full BoxTurtle kits. These vendors also have dedicated channels on the Armored Turtle Discord.
+
+If you purchase a kit from a vendor not on this list, it has not been validated in any way by the ArmoredTurtle team for either quality or completeness. For best results we recommend using a trusted vendor from the list below whenever possible. If you are a vendor and would like to be added to this list, please open a ticket on our Discord to request being added.
 
 US:
 - [DLLPDF](https://dllpdf.com) sells a [BoxTurtle frame kit](http://dllpdf.com/box-turtle-frame)
