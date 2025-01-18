@@ -62,6 +62,20 @@ ArmoredTurtle's project manuals are hosted [here](https://armoredturtle.xyz). Th
 
 If you purchased a kit, all of the parts you need to print are located in the [Base_Build](https://github.com/ArmoredTurtle/BoxTurtle/tree/main/STLs/Base_Build) folder under STLs on this repository. There is also a [web-based configurator](https://armoredturtle.xyz/stl-configurator.html) available for easy identification and download of what STLs to print outside of a base kit build.
 
+If you have an LDO BoxTurtle kit, these are the options to pick on the web-based configurator:
+
+- ``Would you like normal or monolithic skirts?`` - your choice.  If you can fit monolithic on your printer, it has a more unified look vs the split parts, but it's going to require minimum 300mm bed (probably 305x305).  If you want them meshed you can either set top/bottom layers to 0 for the whole model, or you can do a height range modifier up to 3.6mm.
+- ``Would you prefer a hbu or pass through skirts?`` - Hub is our recommended default choice.
+- ``Are you using printed corners or extrusion corners?`` - Printed corners
+- ``LED corners or plain?`` - Plain
+- ``Are you using D2F or D2HW style switches?`` - D2HW
+- ``Are you using an AFC-Lite or BTT MMB/Mosfetti board?`` - AFC-Lite
+- ``Would you like to print the Hardware or No-Hardware version of the trays?`` - Choose No Hardware if you have a minimum 235x235mm bed.  Some enders are max 220x220mm and so the 'bars' that slot into the extrusion require hardware (heatsets/screws) to attach to the tray.
+- ``What style tray would you like to print? Plain, Inlay, Multicolor, or Desiccant?`` - Again, a bit of personal choice.  Plain would be the base option, but there's no reason you couldn't print the others.  An enclosure is in the works so if you wanted to future proof for that, desiccant trays are available (in two sizes).
+- ``Would you like to print a TurtleNeck buffer?`` - Yes
+
+If all of the above sounds a bit overwhelming, you can print all of the parts in [LDO_BoxTurtle_Kit_STLs.zip]((https://github.com/ArmoredTurtle/BoxTurtle/tree/main/STLs/STLs/LDO_BoxTurtle_Kit_STLs.zip) and they will be the right ones to build a functioning BoxTurtle.
+
 This is NOT a [VORON Design](https://vorondesign.com) project, we strongly recommend that you run a profile that is specific to BoxTurtle. Voron parts profiles are not recommended for BoxTurtle printed parts.
 
 There is a calibration print that you may like to print before getting started [here](https://www.printables.com/model/1004303-box-turtle-calibration-fidget).
