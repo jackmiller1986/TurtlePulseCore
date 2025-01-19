@@ -69,7 +69,6 @@ If you have an LDO BoxTurtle kit, these are the options to pick on the web-based
 - ``Are you using printed corners or extrusion corners?`` - Printed corners
 - ``LED corners or plain?`` - Plain
 - ``Are you using D2F or D2HW style switches?`` - D2HW
-- ``Are you using an AFC-Lite or BTT MMB/Mosfetti board?`` - AFC-Lite
 - ``Would you like to print the Hardware or No-Hardware version of the trays?`` - Choose No Hardware if you have a minimum 235x235mm bed.  Some Ender-style printers have a maximum 220x220mm printable voluem, and so the 'bars' that slot into the extrusion require hardware (heatsets/screws) to attach to the tray.
 - ``What style tray would you like to print? Plain, Inlay, Multicolor, or Desiccant?`` - Again, a bit of personal choice.  Plain would be the base option, but there's no reason you couldn't print the others.  An enclosure is [in the works](https://www.youtube.com/watch?v=Jjgi8q28Y2o) so if you wanted to future proof for that, desiccant trays are available (in two sizes).
 - ``Would you like to print a TurtleNeck buffer?`` - Yes
