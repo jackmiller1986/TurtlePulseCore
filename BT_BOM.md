@@ -45,7 +45,7 @@ D2HW-C201H | 5 | |
 |------|----------|-------|-------|
 | 8mm diameter / 80 mm long shaft | 4 | | [AliExpress](https://www.aliexpress.us/item/2255800287548941.html)
 | BMG Gear kit | 4 | | [AliExpress](https://www.aliexpress.us/item/3256805442986544.html)
-| 6mm x 3mm magnet | 8 | | [IsiksTech](https://store.isiks.tech/products/n52-6mm-diameter-3mm-thick-neodymium-magnet)
+| 6mm x 3mm magnet | 8 | N35 These do not need to be strong | [IsiksTech](https://store.isiks.tech/products/n52-6mm-diameter-3mm-thick-neodymium-magnet)
 | ECAS04 Bowden coupler | 17-20 | 17 for hub, 20 for passthrough | [AliExpress](https://www.aliexpress.us/item/3256806432021232.html)
 | PG7 Cable Strain relief | 1 | Optional |
 | M3 roll-in nuts | 2 | |
