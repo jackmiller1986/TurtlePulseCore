@@ -110,7 +110,7 @@ Refer to [BT_Wiring/README.md](BT_Wiring/README.md) for recommended wire lengths
 ## Add Multiple Filaments
 ![Orca_Add_Filament_Settings](https://github.com/user-attachments/assets/61fb26a4-57c6-4624-8435-478d719a01ae)
 
-## Printer Machine G-Code
+## Printer Machine G-Code (NOTE: you will need to [adjust your PRINT_START macro](https://github.com/ArmoredTurtle/BoxTurtle?tab=readme-ov-file#example-print_start-macro) on your printer.cfg side as well!
 ```
 M104 S0 ; Stops OrcaSlicer from sending temperature waits separately
 M140 S0 ; Stops OrcaSlicer from sending temperature waits separately
@@ -136,7 +136,7 @@ gcode:
   {% set BED_TEMP = params.BED|default(60)|float %}
   {% set EXTRUDER_TEMP = params.EXTRUDER|default(195)|float %}
   {% set S_EXTRUDER_TEMP = 150|float %}
-  {% set initial_tool = params.TOOL|int %}
+  {% set initial_tool = params.TOOL|default("0")|int %}
 
   G90 ; use absolute coordinates
   M83 ; extruder relative mode
