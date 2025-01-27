@@ -34,7 +34,7 @@ Further details regarding the AFC-Lite can be found [in the AFC-Lite manual](htt
 After flashing and setting up connections/configurations appropriately, you should be able to either obtain the CANBUS UUID (if using CAN) or the device serial path (e.g., ``/dev/serial/by-id/...``) (if using USB) for the AFC-Lite MCU.  Please ensure you have these values before you proceed, as they will be required.
 
 ## Make note of any toolhead sensor pins
-If you are using [FilamATrix](https://github.com/thunderkeys/FilamATrix), and are using toolhead endstop sensors, make a note of what MCU pins those sensors are connected for the pre-extruder gear sensor (aka ``tool_start``) and post-extruder gear sensor (``tool_end``). Use these in the next step to properly install and configure AFC.
+If you are using [FilamATrix](https://github.com/thunderkeys/FilamATrix), and are using toolhead endstop sensors, make a note of what MCU pins those sensors are connected for the pre-extruder gear sensor (aka ``pin_tool_start``) and post-extruder gear sensor (``pin_tool_end``). Use these in the next step to properly install and configure AFC.
 
 ## Install the AFC Klipper Add-On
 BoxTurtle works best with the [AFC Klipper Add-On](https://github.com/ArmoredTurtle/AFC-Klipper-Add-On). Follow the instructions on that Github for installation and configuration.
@@ -42,7 +42,7 @@ BoxTurtle works best with the [AFC Klipper Add-On](https://github.com/ArmoredTur
 Make sure you update the following settings:
 - ``canbus_uuid`` if using CANBUS
 - ``serial`` if using USB
-- ``tool_start`` and/or ``tool_end``
+- ``pin_tool_start`` and/or ``pin_tool_end``
 
 For best results, reboot your printer after installing the Add-On and including it in your printer.cfg.  This will ensure all required modules are enabled.
 
