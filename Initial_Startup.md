@@ -31,7 +31,7 @@ If you choose to use USB, you will still need to run a 24 V+/V- cable to the AFC
 
 Further details regarding the AFC-Lite can be found [in the AFC-Lite manual](https://github.com/xbst/AFC-Lite/blob/master/Docs/AFC-Lite_Manual.pdf).
 
-After flashing and setting up connections/configurations appropriately, you should be able to either obtain the CANBUS UUID (if using CAN) or the device serial path (e.g., ``/dev/serial/by-id/...``) for the AFC-Lite MCU.  Please ensure you have these values before you proceed, as they will be required.
+After flashing and setting up connections/configurations appropriately, you should be able to either obtain the CANBUS UUID (if using CAN) or the device serial path (e.g., ``/dev/serial/by-id/...``) (if using USB) for the AFC-Lite MCU.  Please ensure you have these values before you proceed, as they will be required.
 
 ## Make note of any toolhead sensor pins
 If you are using [FilamATrix](https://github.com/thunderkeys/FilamATrix), and are using toolhead endstop sensors, make a note of what MCU pins those sensors are connected for the pre-extruder gear sensor (aka ``tool_start``) and post-extruder gear sensor (``tool_end``). Use these in the next step to properly install and configure AFC.
