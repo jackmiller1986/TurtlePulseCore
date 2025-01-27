@@ -55,7 +55,7 @@ The default status indicators are:
 - White: Filament loaded to lane extruder sensor
 - Blue: Filament loaded to toolhead
 
-After the self-test completes, you hopefully will see a picture of a happy turtle in the console log! If you get a picture of an error turtle, you may have a misconfigured AFC setting, broken pin or some other issue that needs attention. If you are unable to resolve the error after visiting the [troubleshooting section](link here), you can get support from the community on the Armored Turtle discord by opening a help thread (run the Discord command ``/help``) to learn how).
+After the self-test completes, you hopefully will see a picture of a happy turtle in the console log! If you get a picture of an error turtle, you may have a misconfigured AFC setting, broken pin or some other issue that needs attention. If you are unable to resolve the error after visiting the [troubleshooting guide](https://github.com/thunderkeys/AFC-Klipper-Add-On/tree/main?tab=readme-ov-file#troubleshooting), you can get support from the community on the Armored Turtle discord by opening a help thread (run the Discord command ``/help``) to learn how).
 
 ## Further tests
 
