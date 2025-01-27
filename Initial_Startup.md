@@ -79,7 +79,7 @@ Insert filament into the feeder tube (it helps to cut it at an angle) and press 
 If you are able to load filament into all 4 lanes and get a white LED indicator, and ``AFC_STATUS`` at the console reports no errors, move on to the next step.
 
 ### TurtleNeck buffer (optional)
-Test that TurtleNeck buffer is configured correctly by extending the slide all the way out, then run ``QUERY_BUFFER BUFFER=Turtle_1``.  This should return 'Trailing``.  Collapse the slide all the way so it triggers the switch at the rear, then rerun the QUERY_BUFFER command.  It should then report ``Advancing``.
+Test that TurtleNeck buffer is configured correctly by extending the slide all the way out, then run ``QUERY_BUFFER BUFFER=Turtle_1``.  This should return ``Trailing``.  Collapse the slide all the way so it triggers the switch at the rear, then rerun the QUERY_BUFFER command.  It should then report ``Advancing``.
 
 Confirm proper operation of your TurtleNeck before proceeding.
 
