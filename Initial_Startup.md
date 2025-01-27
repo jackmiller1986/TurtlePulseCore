@@ -1,6 +1,6 @@
 # BoxTurtle Initial Startup/Commissioning guide
 
-The following guide will help you on the journey to multicolor printing after you have physically completed the [assembly of your BoxTurtle](https://www.armoredturtle.xyz).
+The following guide will help you on the journey to multicolor printing after you have physically completed the [assembly of your BoxTurtle](https://armoredturtle.xyz).
 
 ## Ensure minimum system requirements
 The AFC Klipper Add-On requires a minimum Klipper/Kalico version of 0.12.0, as well as a correspoding klippy-env python environment at least 3.x.
