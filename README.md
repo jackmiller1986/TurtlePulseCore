@@ -64,6 +64,8 @@ ArmoredTurtle's project manuals are hosted [here](https://armoredturtle.xyz). Th
 
 If you purchased a kit, all of the parts you need to print are located in the [Base_Build](https://github.com/ArmoredTurtle/BoxTurtle/tree/main/STLs/Base_Build) folder under STLs on this repository. There is also a [web-based configurator](https://armoredturtle.xyz/stl-configurator.html) available for easy identification and download of what STLs to print outside of a base kit build.
 
+All parts are pre-oriented for printing and have all required support pre-built into the STLs. OrcaSlicer/BambuStudio (and possible others) may give warnings about certain parts having 'floating cantilevers', these are breakway support structures and these errors can safely be ignored.
+
 If you have an LDO BoxTurtle kit, these are the options to pick on the web-based configurator:
 
 - ``Would you like normal or monolithic skirts?`` - your choice.  If you can fit monolithic on your printer, it has a more unified look vs the split parts. We recommend a 350mm minimum size bed for this, but you may be able to get them to squeak in on a ~300-305mm plate.
@@ -78,6 +80,7 @@ If you have an LDO BoxTurtle kit, these are the options to pick on the web-based
 If all of the above sounds a bit overwhelming, you can print all of the parts in [LDO_BoxTurtle_Kit_STLs.zip]((https://github.com/ArmoredTurtle/BoxTurtle/tree/main/STLs/STLs/LDO_BoxTurtle_Kit_STLs.zip) and they will be the right ones to build a functioning BoxTurtle.
 
 This is NOT a [VORON Design](https://vorondesign.com) project, we strongly recommend that you run a profile that is specific to BoxTurtle. Voron parts profiles are not recommended for BoxTurtle printed parts.
+
 
 For the 'No Hardware' trays, you may wish to enable 'Thick bridges' or use a 0.25mm first layer height, as otherwise the built in supports may generate 0.4mm gap between the support and the printed part.
 
