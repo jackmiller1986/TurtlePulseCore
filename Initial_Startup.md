@@ -71,6 +71,8 @@ Verify that each respooler works properly before proceeding.
 ### Trigger switches
 Actuating the trigger switch should begin pulsing that lane's extruder motor to load filament.  Verify that the switch being actuated is activating that same lane's extruder motor.
 
+One all four lanes are confirmed to be activating the correct extruder when the trigger switch is actuated, move on to the next step.
+
 ### Extruders
 Insert filament into the feeder tube (it helps to cut it at an angle) and press through until the extruder motor gears catch the filament and load it further.  If you can press the filament through but it feels like the extruder motor is pushing back on the filmaent instead of pulling it in, try reversing the ``dir_pin`` setting for that extruder motor in ``AFC/AFC_Turtle_1.cfg``.
 
