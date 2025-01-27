@@ -23,6 +23,8 @@ For precise PWM control of the brushed motors, BoxTurtle relies on a custom MCU,
 ## AFC Klipper Add-On
 BoxTurtle was designed in tandem to work with the [AFC Klipper Add-On](https://github.com/ArmoredTurtle/AFC-Klipper-Add-On). For information on installing and configuring the AFC Klipper Add-On, please visit that repository for the most comprehensive detail. Most common configuration options are prompted for during the installation process.  Some of the options presented are covered below at a high level.
 
+The AFC Klipper Add-On requires root access to your SBC running klipper and the ability to install/modify the installation. Additionally, the minimum version for Klipper/Kalico is 0.12.0 and the minimum version for the klippy-env Python installation is 3.x.
+
 ## Filament cutter or tip forming?
 BoxTurtle works most reliably with a toolhead filament cutter. Our recommended toolhead cutter solution is [FilamATrix](https://github.com/thunderkeys/FilamATrix). Please visit that Github repository for the most up to date instructions and information. Ensure that toolhead cutting is selected during installing the AFC Klipper Add-On, or enable it manually by editing ``AFC/AFC.cfg`` and restarting Klipper.
 
