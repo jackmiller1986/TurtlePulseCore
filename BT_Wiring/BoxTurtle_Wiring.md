@@ -22,6 +22,8 @@ Load = Extruder Filament Sensor Switches
 | Lane 4 | 520mm | Dependent on motor | JST-XH-4 |
 
 ##  Indicator LEDs
+The default configuration of the LED indicators is to create a neopixel chain of 4 LEDs, using DOUT on one LED to go to DIN of the next LED. JST-SM connectors are spec'd to provide easy disconnect for lane service, but any wire-to-wire connector can be used in their place (e.g. Molex Microfit 3).
+
 | Lane | Component | Recommended Wire Length | Recommended Wire Gauge | Connector |
 | ---- | ----------- | --------- | ------------| --------- |
 | Lane 1 | [WS2812 PCB](WS2812_PCB.png) | 130mm/130mm tail | 26-30ga | [JST-SM-M](JST-XH_JST-SM.png)/JST-SM-F |
