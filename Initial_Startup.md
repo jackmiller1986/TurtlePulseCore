@@ -268,5 +268,5 @@ If you are modifying an existing macro:
 - Lower the hotend to standby temperature with ``M104 S{S_EXTRUDER_TEMP}``
 - Perform any other necessary pre-flight tasks (e.g., heat soak, re-homing Z, bed meshing, prime/purge line, etc)
 
-### Time for cereal
+## Time for cereal!
 If you have completed all of the above, you are ready to attempt a BoxTurtle serial (cereal) print.  The latest information on the serial print can be found on the Armored Turtle discord in the [\#serial-info](https://discord.com/channels/1229586267671629945/1282095413046022214) channel.
