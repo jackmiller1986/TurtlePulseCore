@@ -162,7 +162,7 @@ Adjust the following tip forming variables in ``AFC/AFC.cfg`` for tip forming (i
   - ``cooling_moves`` - number of cooling moves to perform, the default is ``4``.
 
 ### Enacting changes
-Perform a ``FIRMWARE_RESTART`` after adjusting all the macro variables in ``AFC/AFC_Macro_Vars.cfg`` file.
+Perform a ``FIRMWARE_RESTART`` (a full printer reboot is not required) after adjusting all the macro variables in ``AFC/AFC_Macro_Vars.cfg`` file.
 
 ## Calibration
 Follow [this guide](https://github.com/thunderkeys/AFC-Klipper-Add-On/blob/main/docs/Calibration.md) to calibrate the necessary lengths of your BoxTurtle.
