@@ -174,15 +174,98 @@ You're now ready to attempt your first Automated Filament Control action!
 
 - Home your printer (using G28 or Mainsail/Fluidd GUI buttons)
 - Heat the hotend to your filament's extrusion temperature (e.g., PLA 210, ABS 260, etc).
-- Load filament the filament for lane 1 with with the ``T0`` command. Confirm that filament travels to the toolhead and performs any configured POOP or WIPE actions.  You should now also be able to manually extrude filament using the console/GUI.
-- Change filament to lane 2 using the ``T1`` command.  Confirm that the toolhead moves to the park position, performs the cut (or tip shaping, if not using a cutter), retracts the filament for lane 1 back to the BoxTurtle hub.  It will then load lane 2's filament to the toolhead, and perform the POOP, WIPE, KICK and WIPE macros.
+- Load filament the filament for lane 1 with with the ``T0`` command. Confirm that filament travels to the toolhead and performs any configured poop or wipe actions.  After the load has successfully completed, test that you are able to manually extrude filament using the console/GUI.
+- Change filament to lane 2 using the ``T1`` command.  Confirm that the toolhead moves to the park position, performs the cut (or tip shaping, if not using a cutter), retracts the filament for lane 1 back to the BoxTurtle hub.  It will then load the filament in lane 2 to the toolhead, and perform the poop, wipe, kick and wipe macros.
 - Repeat this process for lane 3 (``T2``) and lane 4 (``T3``).
 
-- If you are able to successfully load and unload filament without intervention, you are ready to move on to the next step. Almost there!
+If you are able to successfully load and unload filament without intervention, you are ready to move on to the next step. Almost there!
 
 ### Configuring your slicer
 
-- TBD
+The recommended slicer for AFC is OrcaSlicer. Other slicers such as PrusaSlicer or SuperSlicer may be used, and the configuration of options within them is similar but naming or options may be slightly different.
+
+#### Updating printer settings in Orca
+For the printer you are adding BoxTurtle to, first go to the Printer settings, Multimaterial tab and ensure settings are configured as per the below screenshot.
+![Orca_Pinter_Settings](https://github.com/user-attachments/assets/1aa56051-dbbf-49a4-b818-368e00406b17)
+
+#### Adding additional filaments/extruders
+Increase the number of filaments to match your BoxTurtle's lane count. 
+![Orca_Add_Filament_Settings](https://github.com/user-attachments/assets/61fb26a4-57c6-4624-8435-478d719a01ae)
+
+#### Updating the Machine G-code settings
+
+- Set ``Machine start G-code` appropriately for your printer, specifically adding the ``TOOL={initial_tool}`` to your ``PRINT_START`` macro.
+```
+M104 S0 ; Stops OrcaSlicer from sending temperature waits separately
+M140 S0 ; Stops OrcaSlicer from sending temperature waits separately
+PRINT_START EXTRUDER=[nozzle_temperature_initial_layer] BED=[bed_temperature_initial_layer_single] TOOL={initial_tool}
+```
+
+- Set ``Change Filament G-Code`` to the below value.  Remove any other custom code here, e.g. extruder moves.
+```
+T[next_extruder]
+
+#### Additional Slicer configuration - pre-OrcaSlicer 2.2.0
+Configuring per-material filament ramming is no longer required as of the official OrcaSlicer 2.2.0 release (PR [#6934](https://github.com/SoftFever/OrcaSlicer/pull/6934)).  If you are on an earlier version than that (including betas/release candidates) you will need to make the following additional changes to your slicer configurations.
+#### Material Settings
+![Orca_Material_Settings](https://github.com/user-attachments/assets/a1569e5a-24c5-48f9-98fb-26465bf7c75c)
+##### Ramming Settings
+Because the AFC-Klipper-Add-On handles any tip forming in the extension, we need to disable these specific settings in the slicer software.  Below is a screenshot for OrcaSlicer, but most Slic3r-based slicers have a similar dialog/setting.
+![Orca_Ramming_Settings](https://github.com/user-attachments/assets/2744fb86-afae-4645-9215-3f8507558509)
+
+## Updating your PRINT_START macro
+#### *Please note this is just an example macro to show how to incorporate the initial tool into your print start macro. Please adjust it to match your printer setup. A good starting point for a PRINT_START macro is [jontek2's "A Better PRINT_START macro"](https://github.com/jontek2/A-better-print_start-macro)*
+
+Add the TOOL parameter we added to the Machine start G-Code earlier to your PRINT_START macro.
+
+```
+[gcode_macro PRINT_START]
+gcode:
+  {% set BED_TEMP = params.BED|default(60)|float %}
+  {% set EXTRUDER_TEMP = params.EXTRUDER|default(195)|float %}
+  {% set S_EXTRUDER_TEMP = 150|float %}
+  {% set initial_tool = params.TOOL|default("0")|int %}
+
+  G90 ; use absolute coordinates
+  M83 ; extruder relative mode
+
+  G28 # Home Printer
+  # Do any other leveling such as QGL here
+
+  AFC_PARK
+
+  M140 S{BED_TEMP} # Set bed temp
+  M109 S{EXTRUDER_TEMP} # wait for extruder temp
+  T{initial_tool} #Load Initial Tool
+
+  M104 S{S_EXTRUDER_TEMP} # set standby extruder temp
+  M190 S{BED_TEMP} # wait for bed temp
+
+  G28 Z
+
+  # Bedmesh or load bedmesh
+
+  AFC_PARK
+  M109 S{EXTRUDER_TEMP} ; wait for extruder temp
+
+  # Add any pre print prime/purge line here
+  # Start Print
+```
+
+If you are modifying an existing macro:
+- Add the following to the top of the PRINT_START macro just under the ``gcode:`` line
+```
+  {% set BED_TEMP = params.BED|default(60)|float %}
+  {% set EXTRUDER_TEMP = params.EXTRUDER|default(195)|float %}
+  {% set S_EXTRUDER_TEMP = 150|float %}
+  {% set initial_tool = params.TOOL|default("0")|int %}
+```
+- Home the printer using ``G28``
+- Set hotend to extrusion temperature ``M104 S{EXTRUDER_TEMP}``
+- Load the first filament to be used with ``T{initial_tool}``
+- Move to park position with ``AFC_PARK``
+- Lower the hotend to standby temperature with ``M104 S{S_EXTRUDER_TEMP}``
+- Perform any other necessary pre-flight tasks (e.g., heat soak, re-homing Z, bed meshing, prime/purge line, etc)
 
 ### Time for cereal
 If you have completed all of the above, you are ready to attempt a BoxTurtle serial (cereal) print.  The latest information on the serial print can be found on the Armored Turtle discord in the [\#serial-info](https://discord.com/channels/1229586267671629945/1282095413046022214) channel.
