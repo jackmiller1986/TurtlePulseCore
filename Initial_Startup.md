@@ -39,9 +39,20 @@ If you are using [FilamATrix](https://github.com/thunderkeys/FilamATrix), and ar
 If you do not have a native toolhead filament sensor, you can use either an inline filament sensor such as [Filatector](https://github.com/ArmoredTurtle/Filatector), or you can use the [TurtleNeck buffer](https://github.com/ArmoredTurtle/TurtleNeck) as a virtual toolhead endstop, please see [this guide](https://github.com/ArmoredTurtle/AFC-Klipper-Add-On/blob/main/docs/Buffer_Ram_Sensor.md) for more details.
 
 ## Install the AFC Klipper Add-On
-BoxTurtle works best with the [AFC Klipper Add-On](https://github.com/ArmoredTurtle/AFC-Klipper-Add-On). Follow the instructions on that Github for installation and configuration.
+BoxTurtle works best with the [AFC Klipper Add-On](https://github.com/ArmoredTurtle/AFC-Klipper-Add-On).  The rest of this guide will focus on configuring AFC for use with BoxTurtle.
 
-Make sure you update the following settings:
+Follow the instructions on that Github for latest details on installation and configuration, but at the time of writing this is the easy button:
+
+```
+cd ~
+git clone https://github.com/ArmoredTurtle/AFC-Klipper-Add-On.git
+cd AFC-Klipper-Add-On
+./install-afc.sh
+```
+
+The default options for the park, cut, kick, wipe, and tip forming macros can be used if you don't know what to choose. These can all be changed later by editing ``AFC/AFC.cfg`` and doing a firmware restart.
+
+After installation, please ensure sure you update the following settings:
 - ``canbus_uuid`` if using CANBUS
 - ``serial`` if using USB
 - ``pin_tool_start`` and/or ``pin_tool_end``
@@ -78,10 +89,10 @@ Verify that each respooler works properly before proceeding.
 ### Trigger switches
 Actuating the trigger switch should begin pulsing that lane's extruder motor to load filament.  Verify that the switch being actuated is activating that same lane's extruder motor.
 
-One all four lanes are confirmed to be activating the correct extruder when the trigger switch is actuated, move on to the next step.
+Once all four lanes are confirmed to be activating the correct extruder when the trigger switch is actuated, move on to the next step.
 
 ### Extruders
-Insert filament into the feeder tube (it helps to cut it at an angle) and press through until the extruder motor gears catch the filament and load it further.  If you can press the filament through but it feels like the extruder motor is pushing back on the filmaent instead of pulling it in, try reversing the ``dir_pin`` setting for that extruder motor in ``AFC/AFC_Turtle_1.cfg``.
+Insert filament into the feeder tube (it helps to cut it at an angle) and press through until the extruder motor gears catch the filament and load it further.  If you can press the filament through but it feels like the extruder motor is pushing back on the filament instead of pulling it in, try reversing the ``dir_pin`` setting for that extruder motor in ``AFC/AFC_Turtle_1.cfg``.
 
 If you are able to load filament into all 4 lanes and get a white LED indicator, and ``AFC_STATUS`` at the console reports no errors, move on to the next step.
 
@@ -176,7 +187,7 @@ You're now ready to attempt your first Automated Filament Control action!
 
 - Home your printer (using G28 or Mainsail/Fluidd GUI buttons)
 - Heat the hotend to your filament's extrusion temperature (e.g., PLA 210, ABS 260, etc).
-- Load filament the filament for lane 1 with with the ``T0`` command.
+- Load the filament for lane 1 with with the ``T0`` command.
 - Confirm that filament travels to the toolhead and performs any configured poop or wipe actions.  After the load has successfully completed, test that you are able to manually extrude filament using the console/GUI.
 - Change filament to lane 2 using the ``T1`` command.  Confirm that the toolhead moves to the park position, performs the cut (or tip shaping, if not using a cutter), retracts the filament for lane 1 back to the BoxTurtle hub.  It will then load the filament in lane 2 to the toolhead, and perform the poop, wipe, kick and wipe macros.
 - Repeat this process for lane 3 (``T2``) and lane 4 (``T3``).
