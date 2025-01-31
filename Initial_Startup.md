@@ -36,7 +36,7 @@ After flashing and setting up connections/configurations appropriately, you shou
 ## Make note of any toolhead sensor pins
 If you are using [FilamATrix](https://github.com/thunderkeys/FilamATrix), and are using toolhead endstop sensors, make a note of what MCU pins those sensors are connected for the pre-extruder gear sensor (aka ``pin_tool_start``) and post-extruder gear sensor (``pin_tool_end``). Use these in the next step to properly install and configure AFC.
 
-If you do not have a native toolhead filament sensor, you can use either an inline filament sensor such as [Filatector](https://github.com/ArmoredTurtle/Filatector), or you can use a [Turtleneck buffer](https://github.com/ArmoredTurtle/Turtleneck) as a virtual toolhead endstop, please see [this guide](https://github.com/ArmoredTurtle/AFC-Klipper-Add-On/blob/main/docs/Buffer_Ram_Sensor.md) for more details.
+If you do not have a native toolhead filament sensor, you can use either an inline filament sensor such as [Filatector](https://github.com/ArmoredTurtle/Filatector), or you can use the [TurtleNeck buffer](https://github.com/ArmoredTurtle/TurtleNeck) as a virtual toolhead endstop, please see [this guide](https://github.com/ArmoredTurtle/AFC-Klipper-Add-On/blob/main/docs/Buffer_Ram_Sensor.md) for more details.
 
 ## Install the AFC Klipper Add-On
 BoxTurtle works best with the [AFC Klipper Add-On](https://github.com/ArmoredTurtle/AFC-Klipper-Add-On). Follow the instructions on that Github for installation and configuration.
@@ -85,7 +85,7 @@ Insert filament into the feeder tube (it helps to cut it at an angle) and press 
 
 If you are able to load filament into all 4 lanes and get a white LED indicator, and ``AFC_STATUS`` at the console reports no errors, move on to the next step.
 
-### TurtleNeck buffer (optional)
+### TurtleNeck buffer
 Test that TurtleNeck buffer is configured correctly by extending the slide all the way out, then run ``QUERY_BUFFER BUFFER=Turtle_1``.  This should return ``Trailing``.  Collapse the slide all the way so it triggers the switch at the rear, then rerun the QUERY_BUFFER command.  It should then report ``Advancing``.
 
 Confirm proper operation of your TurtleNeck before proceeding.
