@@ -54,8 +54,9 @@ AFC will run a self-test automatically on startup. It will run through the respo
 The default status indicators are:
 
 - Red: No filament loaded/detected at extruder sensor
-- White: Filament loaded to lane extruder sensor
+- Green: Filament loaded to lane extruder sensor
 - Blue: Filament loaded to toolhead
+- White: Filament in process of being loaded
 
 After the self-test completes, you hopefully will see a picture of a happy turtle in the console log! If you get a picture of an error turtle, you may have a misconfigured AFC setting, broken pin or some other issue that needs attention.
 
