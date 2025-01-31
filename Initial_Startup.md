@@ -5,7 +5,7 @@ The following guide will help you on the journey to multicolor printing after yo
 ## Ensure minimum system requirements
 The AFC Klipper Add-On requires a minimum Klipper/Kalico version of 0.12.0, as well as a correspoding klippy-env python environment at least 3.x.
 
-If you are on Klipper/Kalico 12, but your ~/klippy-env/bin/python returns version 2.7.x, you can recreate it with the following.
+If you are on Klipper/Kalico 12, but running ``~/klippy-env/bin/python --version`` returns version 2.7.x, you can recreate it with the following.
 
 ```
 sudo service klipper stop
