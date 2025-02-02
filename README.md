@@ -53,7 +53,7 @@ Different filament color transitions will require different purge volumes, and t
 
 # Enclosure
 
-The enclosure option for BoxTurtle has been moved to its [own repository](https://github.com/ArmoredTurtle/BoxTurtle-Enclosure-). The enclosure is still [under development](https://www.youtube.com/watch?v=Jjgi8q28Y2o), but the most up to date information on it can be found at that repository. Also considering [joining the ArmoredTurtle Discord](https://discord.gg/eT8zc3bvPR) to get progress updates as development progresses.
+The enclosure option for BoxTurtle has been moved to its [own repository](https://github.com/ArmoredTurtle/BoxTurtle-Enclosure). The enclosure is still [under development](https://www.youtube.com/watch?v=Jjgi8q28Y2o), but the most up to date information on it can be found at that repository. Also considering [joining the ArmoredTurtle Discord](https://discord.gg/eT8zc3bvPR) to get progress updates as development progresses.
 
 # Manual
 
