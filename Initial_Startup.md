@@ -110,6 +110,9 @@ Test that TurtleNeck buffer is configured correctly by extending the slide all t
 
 Confirm proper operation of your TurtleNeck before proceeding.
 
+## Setting up hotend specific values
+Some of the values with AFC are extremely dependent on your hotend. If you are using FilamATrix, we have provided hotend cut-away diagrams that include suggested values for ``tool_stn``, ``tool_stn_unload``, and ``variable_retract_length``.
+
 ## Setting up macro variables
 
 ### A note on order of operations of macros during tool changes
@@ -144,11 +147,11 @@ Adjust the following macro variables in ``AFC/AFC_Macro_Vars.cfg`` for the park 
 #### Cut
 The cut macro is enabled or disabled by setting the ``tool_cut`` variable in ``AFC/AFC.cfg`` (this is prompted for during the install script, but you can change it at any time and do a firmware restart to enact the change.)
 Adjust the following macro variables in ``AFC/AFC_Macro_Vars.cfg`` for the cut macro (if enabled) for your specific printer. 
-  - ``variable_retract_length`` - How much to retract filament before performing the cut. This reduces purge waste and improves reliability of insertion of the next filament. Hotend dependent, a good starting value is the length of your hotend PTFE + 1-5mm.
-  - ``variable_pin_loc_xy`` - X,Y position where your toolhead cutter arm *just* touches the depressor pin.
-  - ``variable_cut_direction`` - For FilamATrix, you want this to be set to ``left``. Other toolhead cutters may actuate in a different direction (e.g., Dragon Burner cutter may be ``front``).
-  - ``variable_pin_park_dist`` - How far to park the toolhead near the depressor pin before initiating the move. This acts as a safety as well as helps generate momentum for the cut.
-  - ``variable_cut_move_dist`` - How far the toolhead has to move from ``variable_pin_loc_xy`` to fully depress the cutter. This should be reduced from the actual value by 0.5mm as a buffer to prevent skipped steps.
+  - ``variable_retract_length`` - How much to retract filament before performing the cut. This reduces purge waste and improves reliability of insertion of the next filament. Hotend dependent, a good starting value is the length of your meltzone. Please see the hotend diagrams for suggested values. The default is ``20``.
+  - ``variable_pin_loc_xy`` - X,Y position where your toolhead cutter arm *just* touches the depressor pin.  There is no default value, this must be defined.
+  - ``variable_cut_direction`` - For FilamATrix, you want this to be set to ``left``. Other toolhead cutters may actuate in a different direction (e.g., Dragon Burner cutter may be ``front``).  The default value is ``left``.
+  - ``variable_pin_park_dist`` - How far to park the toolhead near the depressor pin before initiating the move. This acts as a safety as well as helps generate momentum for the cut. The default value is ``6.0``.
+  - ``variable_cut_move_dist`` - How far the toolhead has to move from ``variable_pin_loc_xy`` to fully depress the cutter. This should be reduced from the actual value by 0.5mm as a buffer to prevent skipped steps. The default value is ``8.5``
   - ``variable_cut_count`` - How many times to attempt the cut. The default value is ``2``, to ensure a clean/complete cut.
 
 #### Poop
