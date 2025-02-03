@@ -190,6 +190,7 @@ EU:
 UK:
 - [OneTwo3D.co.uk](https://www.onetwo3d.co.uk)
 - [Desktop Machine Shop](https://www.desktopmachineshop.com/shop/ldo-boxturtle-afc-kit-v1-0-163?category=4#attribute_values=)
+- [Viperworx](https://www.viperworx.uk/product/box-turtle-enclosure-panels-by-armored-turtle)
   
 AU:
 - [DREMC](https://store.dremc.com.au/products/ldo-box-turtle-hardware-kit)
