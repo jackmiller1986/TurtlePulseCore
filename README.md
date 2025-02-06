@@ -12,11 +12,13 @@ If you appreciate the work we are doing, you can support us [here](https://www.a
 
 # How it works
 
-BoxTurtle is an automated, lane-based filament changing system, also known by some as a "Type B MMU." Each lane is equipped with its own dedicated motor that moves filament to and from the tool head independently, eliminating the need for a selector cart or servos. 
+BoxTurtle is a lane based automated filament changing system. Each lane is equipped with its own dedicated extruder that moves filament to and from the tool head independently. Spool management is done with low drag, top fed electric respoolers.
 
-To accommodate any differences in rotation distance between the extruder in the tool head and the lane motors, BoxTurtle uses a toolhead buffer, like [TurtleNeck](https://github.com/ArmoredTurtle/TurtleNeck) by ArmoredTurtle. This system is "bufferless," meaning no filament boxes (no spaghetti boxes) are required, similar to the AMS. Each lane features an independent respooler equipped with a brushed motor, which helps rewind the spool and assists the lane motor in feeding the filament smoothly. This prevents issues like spool tangling or "bucking."
+Each lane merges to a hub (combiner) with a sensor with one outlet that goes to the toolhead.
 
-For precise PWM control of the brushed motors, BoxTurtle relies on a custom MCU, AFC-lite, developed by [Isik's Tech @xbst](https://github.com/xbst/AFC-Lite/) 
+To accommodate any differences in rotation distance between the extruder in the tool head and the lane motors, BoxTurtle uses a toolhead buffer, like [TurtleNeck](https://github.com/ArmoredTurtle/TurtleNeck) by ArmoredTurtle.
+
+For best results we recommend the AFC-Lite, developed by [Isik's Tech @xbst](https://github.com/xbst/AFC-Lite/) as it has the necessary sensor ports and DC brushed motor drivers used for BoxTurtle's electric respoolers.
 
 # For best results
 
@@ -53,7 +55,7 @@ Different filament color transitions will require different purge volumes, and t
 
 # Enclosure
 
-The enclosure option for BoxTurtle has been moved to its [own repository](https://github.com/ArmoredTurtle/BoxTurtle-Enclosure-). The enclosure is still [under development](https://www.youtube.com/watch?v=Jjgi8q28Y2o), but the most up to date information on it can be found at that repository. Also considering [joining the ArmoredTurtle Discord](https://discord.gg/eT8zc3bvPR) to get progress updates as development progresses.
+The enclosure option for BoxTurtle has been moved to its [own repository](https://github.com/ArmoredTurtle/BoxTurtle-Enclosure). The enclosure is still [under development](https://www.youtube.com/watch?v=Jjgi8q28Y2o), but the most up to date information on it can be found at that repository. Also considering [joining the ArmoredTurtle Discord](https://discord.gg/eT8zc3bvPR) to get progress updates as development progresses.
 
 # Manual
 
@@ -82,7 +84,7 @@ If all of the above sounds a bit overwhelming, you can print all of the parts in
 This is NOT a [VORON Design](https://vorondesign.com) project, we strongly recommend that you run a profile that is specific to BoxTurtle. Voron parts profiles are not recommended for BoxTurtle printed parts.
 
 
-For the 'No Hardware' trays, you may wish to enable 'Thick bridges' or use a 0.25mm first layer height, as otherwise the built in supports may generate 0.4mm gap between the support and the printed part.
+For the 'No Hardware' trays, you may wish to enable 'Thick bridges' or use a 0.25mm first layer height, as otherwise the built in supports may generate 0.4mm gap between the support and the printed part.  The N20 motor mounts may also benefit from an 0.25mm first layer height.
 
 There is a calibration print that you may like to print before getting started [here](https://www.printables.com/model/1004303-box-turtle-calibration-fidget).
 
@@ -190,6 +192,7 @@ EU:
 UK:
 - [OneTwo3D.co.uk](https://www.onetwo3d.co.uk)
 - [Desktop Machine Shop](https://www.desktopmachineshop.com/shop/ldo-boxturtle-afc-kit-v1-0-163?category=4#attribute_values=)
+- [Viperworx](https://www.viperworx.uk/product/box-turtle-enclosure-panels-by-armored-turtle)
   
 AU:
 - [DREMC](https://store.dremc.com.au/products/ldo-box-turtle-hardware-kit)
