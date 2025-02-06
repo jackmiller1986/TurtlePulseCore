@@ -62,9 +62,11 @@ cd AFC-Klipper-Add-On
 The default options for the park, cut, kick, wipe, and tip forming macros can be used if you don't know what to choose. These can all be changed later by editing ``AFC/AFC.cfg`` and doing a firmware restart.
 
 After installation, please ensure sure you update the following settings:
-- ``canbus_uuid`` if using CANBUS
-- ``serial`` if using USB
-- ``pin_tool_start`` and/or ``pin_tool_end``
+- In ``AFC/AFC_Turtle_1.cfg``:
+ - ``canbus_uuid`` if using CANBUS
+ - ``serial`` if using USB
+- In ``AFC/AFC_Hardware.cfg``
+ - ``pin_tool_start`` and/or ``pin_tool_end``
 
 For best results, reboot your printer after installing the Add-On and including it in your printer.cfg.  This will ensure all required modules are enabled.
 
@@ -111,7 +113,14 @@ Test that TurtleNeck buffer is configured correctly by extending the slide all t
 Confirm proper operation of your TurtleNeck before proceeding.
 
 ## Setting up hotend specific values
-Some of the values with AFC are extremely dependent on your hotend. If you are using FilamATrix, we have provided hotend cut-away diagrams that include suggested values for ``tool_stn``, ``tool_stn_unload``, and ``variable_retract_length``.
+Some of the values with AFC are extremely dependent on your hotend.
+
+Suggested starting values for hotend types (more to be added later).  ``tool_stn`` and ``tool_stn_unload`` are in ``AFC/AFC_Hardware.cfg``, ``variable_retract_length`` and ``variable_pushback_length`` are in ``AFC/AFC_Macro_Vars.cfg``.  For ``tool_stn``, if you have ``pin_tool_end`` defined, use the second value; otherwise, use the first value. You may need to increase this value if you are using a ram buffer as the toolhead sensor.
+
+| Hotend | tool_stn | tool_stn_unload | variable_retract_length | variable_pushback_length
+| ------ | -------- | --------------- | ----------------------- | ------------------------
+| Revo Voron | 78 / 54 | 62 | 22 | 20 |
+
 
 ## Setting up macro variables
 
