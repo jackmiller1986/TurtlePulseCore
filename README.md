@@ -109,68 +109,8 @@ Refer to [BT_Wiring/README.md](BT_Wiring/README.md) for recommended wire lengths
 | Extruder to Hub (Outer lanes) | 4mm | 2mm | 171mm | Quantity 2; 3mm ID will blow out. A chamfer is recommended on each end. |
 | Extruder to Hub (Inner lanes) | 4mm | 2mm | 101mm | Quantity 2; 3mm ID will blow out. A chamfer is recommended on each end. |
 
-# Slicer configuration
-
-[Orca Slicer](https://github.com/SoftFever/OrcaSlicer) is the preferred and recommended slicer for BoxTurtle and AFC.
-## Printer Settings
-![Orca_Pinter_Settings](https://github.com/user-attachments/assets/1aa56051-dbbf-49a4-b818-368e00406b17)
-## Add Multiple Filaments
-![Orca_Add_Filament_Settings](https://github.com/user-attachments/assets/61fb26a4-57c6-4624-8435-478d719a01ae)
-
-## Printer Machine G-Code (NOTE: you will need to [adjust your PRINT_START macro](https://github.com/ArmoredTurtle/BoxTurtle?tab=readme-ov-file#example-print_start-macro) on your printer.cfg side as well!
-```
-M104 S0 ; Stops OrcaSlicer from sending temperature waits separately
-M140 S0 ; Stops OrcaSlicer from sending temperature waits separately
-PRINT_START EXTRUDER=[nozzle_temperature_initial_layer] BED=[bed_temperature_initial_layer_single] TOOL={initial_tool}
-```
-## Change Filament G-Code
-```
-T[next_extruder]
-```
-## Additional Slicer configuration - pre-OrcaSlicer 2.2.0
-Configuring per-material filament ramming is no longer required as of the official OrcaSlicer 2.2.0 release (PR [#6934](https://github.com/SoftFever/OrcaSlicer/pull/6934)).  If you are on an earlier version than that (including betas/release candidates) you will need to make the following additional changes to your slicer configurations.
-### Material Settings
-![Orca_Material_Settings](https://github.com/user-attachments/assets/a1569e5a-24c5-48f9-98fb-26465bf7c75c)
-### Ramming Settings
-Because the AFC-Klipper-Add-On handles any tip forming in the extension, we need to disable these specific settings in the slicer software.  Below is a screenshot for OrcaSlicer, but most Slic3r-based slicers have a similar dialog/setting.
-![Orca_Ramming_Settings](https://github.com/user-attachments/assets/2744fb86-afae-4645-9215-3f8507558509)
-
-## Example PRINT_START macro
-#### *Please note this is just an example macro to show how to incorporate the initial tool into your print start macro. Please adjust it to match your printer setup. A good starting point for a PRINT_START macro is [jontek2's "A Better PRINT_START macro"](https://github.com/jontek2/A-better-print_start-macro)*
-```
-[gcode_macro PRINT_START]
-gcode:
-  {% set BED_TEMP = params.BED|default(60)|float %}
-  {% set EXTRUDER_TEMP = params.EXTRUDER|default(195)|float %}
-  {% set S_EXTRUDER_TEMP = 150|float %}
-  {% set initial_tool = params.TOOL|default("0")|int %}
-
-  G90 ; use absolute coordinates
-  M83 ; extruder relative mode
-  
-  G28 # Home Printer
-  # Do any other leveling such as QGL here
-
-  AFC_PARK
-
-  M140 S{BED_TEMP} # Set bed temp
-  M109 S{EXTRUDER_TEMP} # wait for extruder temp
-  T{initial_tool} #Load Initial Tool
-  
-  M104 S{S_EXTRUDER_TEMP} # set standby extruder temp
-  M190 S{BED_TEMP} # wait for bed temp
-    
-  G28 Z
-
-  # Bedmesh or load bedmesh
-
-  AFC_PARK
-  M109 S{EXTRUDER_TEMP} ; wait for extruder temp
-  
-  # Add any pre print prime/purge line here
-  # Start Print
-```
-
+# Initial startup guide
+Please refer to the [Initial Startup Guide](Initial_Startup.md) after completing the assembly of your BoxTurtle for next steps.
 
 # BoxTurtle sourcing/vendors
 While BoxTurtle can be mostly self-sourced, some vendors offer partial or full BoxTurtle kits. These vendors also have dedicated channels on the Armored Turtle Discord.
