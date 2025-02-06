@@ -84,7 +84,7 @@ If all of the above sounds a bit overwhelming, you can print all of the parts in
 This is NOT a [VORON Design](https://vorondesign.com) project, we strongly recommend that you run a profile that is specific to BoxTurtle. Voron parts profiles are not recommended for BoxTurtle printed parts.
 
 
-For the 'No Hardware' trays, you may wish to enable 'Thick bridges' or use a 0.25mm first layer height, as otherwise the built in supports may generate 0.4mm gap between the support and the printed part.
+For the 'No Hardware' trays, you may wish to enable 'Thick bridges' or use a 0.25mm first layer height, as otherwise the built in supports may generate 0.4mm gap between the support and the printed part.  The N20 motor mounts may also benefit from an 0.25mm first layer height.
 
 There is a calibration print that you may like to print before getting started [here](https://www.printables.com/model/1004303-box-turtle-calibration-fidget).
 
