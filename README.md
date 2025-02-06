@@ -12,13 +12,13 @@ If you appreciate the work we are doing, you can support us [here](https://www.a
 
 # How it works
 
-BoxTurtle is a lane based automated filament changing system. Each lane is equipped with its own dedicated extruder that moves filament to and from the tool head independently. Spool management is done with low drag, top fed electric respoolers. 
+BoxTurtle is a lane based automated filament changing system. Each lane is equipped with its own dedicated extruder that moves filament to and from the tool head independently. Spool management is done with low drag, top fed electric respoolers.
 
 Each lane merges to a hub (combiner) with a sensor with one outlet that goes to the toolhead.
 
 To accommodate any differences in rotation distance between the extruder in the tool head and the lane motors, BoxTurtle uses a toolhead buffer, like [TurtleNeck](https://github.com/ArmoredTurtle/TurtleNeck) by ArmoredTurtle.
 
-For best results we recommend the AFC-lite, developed by [Isik's Tech @xbst](https://github.com/xbst/AFC-Lite/) as it has the necessary sensor ports and DC brushed motor drivers used for BoxTurtles electric respoolers.
+For best results we recommend the AFC-Lite, developed by [Isik's Tech @xbst](https://github.com/xbst/AFC-Lite/) as it has the necessary sensor ports and DC brushed motor drivers used for BoxTurtle's electric respoolers.
 
 # For best results
 
