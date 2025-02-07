@@ -57,6 +57,9 @@ Different filament color transitions will require different purge volumes, and t
 
 The enclosure option for BoxTurtle has been moved to its [own repository](https://github.com/ArmoredTurtle/BoxTurtle-Enclosure). The enclosure is still [under development](https://www.youtube.com/watch?v=Jjgi8q28Y2o), but the most up to date information on it can be found at that repository. Also considering [joining the ArmoredTurtle Discord](https://discord.gg/eT8zc3bvPR) to get progress updates as development progresses.
 
+# Errata
+Identified known issues and potential workarounds are documented in [ERRATA.md](ERRATA.md).
+
 # Manual
 
 ArmoredTurtle's project manuals are hosted [here](https://armoredturtle.xyz). There is no PDF, this is intended to make the build experience as easy as possible.
@@ -94,6 +97,7 @@ There are a few ways to create a 'meshed' look on the hexes on the skirts, using
 - On the print settings profile, set top and bottom layers to 0.  Adjust infill pattern, density and angle to suit your preference.
 - You can also do a height range modifier on the part from 0-3.6mm to set top/bottom layers to 0, and infill pattern, desnity and angle to suit your preference.
 - If you would like a different color for the hexes, you can do a color swap at layer 19 (3.8mm with 0.2mm layer heights).
+- [SteveBuilds](https://youtube.com/@SteveBuilds) has created a custom set of skirts with modeled in hexes or multibody parts that can be found [here](https://github.com/stvptrsn/Printer_Stuff/tree/main/BoxTurtle/Skirts).
 
 # Wiring
 ![BoxTurtle_AFC-Lite_Pinout](https://github.com/user-attachments/assets/59a0e1d9-f870-4c50-a056-59aa76489e71)
