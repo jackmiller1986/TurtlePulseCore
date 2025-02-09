@@ -22,3 +22,6 @@ As each printer connection is different, cable was not included in batch 1 kits 
 
 ### N20 motor failure
 If you encounter any suspected failure issue with your N20 respooler motors, please contact your reseller. LDO is conducting analysis on any failures.
+
+### M3 heatset count for FilamATrix
+If you are doing a new build of Clockwork2 there will not be sufficient heatsets in the bag - the kits were designed with an upgrade to an existing CW2 extruder in mind. Additionally the kits may be a 1-2 heatsets short for all components even after accounting for spares in the FilamATrix bag, this will be corrected in a future batch.
