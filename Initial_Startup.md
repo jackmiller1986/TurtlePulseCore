@@ -221,7 +221,9 @@ The recommended slicer for AFC is OrcaSlicer. Other slicers such as PrusaSlicer 
 
 #### Updating printer settings in Orca
 For the printer you are adding BoxTurtle to, first go to the Printer settings, Multimaterial tab and ensure settings are configured as per the below screenshot.
-![Orca_Pinter_Settings](https://github.com/user-attachments/assets/1aa56051-dbbf-49a4-b818-368e00406b17)
+![Orca_Printer_Settings](https://github.com/user-attachments/assets/1aa56051-dbbf-49a4-b818-368e00406b17)
+
+Also, on the Extruder 1 setting page - reduce ``Retraction while switching material`` length from the default of 2 to 0.5. (PrusaSlicer/SuperSlicer users, this default is 10mm and is on each extruder under the printer settings).
 
 #### Adding additional filaments/extruders
 Increase the number of filaments to match your BoxTurtle's lane count. 
