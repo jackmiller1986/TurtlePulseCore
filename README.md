@@ -97,7 +97,7 @@ There are a few ways to create a 'meshed' look on the hexes on the skirts, using
 - On the print settings profile, set top and bottom layers to 0.  Adjust infill pattern, density and angle to suit your preference.
 - You can also do a height range modifier on the part from 0-3.6mm to set top/bottom layers to 0, and infill pattern, desnity and angle to suit your preference.
 - If you would like a different color for the hexes, you can do a color swap at layer 19 (3.8mm with 0.2mm layer heights).
-- [SteveBuilds](https://youtube.com/@SteveBuilds) has created a custom set of skirts with modeled in hexes or multibody parts that can be found [here](https://github.com/stvptrsn/Printer_Stuff/tree/main/BoxTurtle/Skirts).
+- [SteveBuilds](https://youtube.com/@SteveBuilds) created a custom set of skirt options with modeled in hexes and multibody parts, these can be found [here (multibody)](https://github.com/ArmoredTurtle/BoxTurtle/tree/main/STLs/Option_Parts/Skirts/Multibody/) and [here (modeled hex meshes)]((https://github.com/ArmoredTurtle/BoxTurtle/tree/main/STLs/Option_Parts/Skirts/Hex_Mesh/). To get a two tone color look, perform a color change at 3.2mm (layer 16 at 0.2mm print heights).
 
 # Wiring
 ![BoxTurtle_AFC-Lite_Pinout](https://github.com/user-attachments/assets/59a0e1d9-f870-4c50-a056-59aa76489e71)
