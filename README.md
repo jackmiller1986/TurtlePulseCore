@@ -112,6 +112,8 @@ Refer to [BT_Wiring/README.md](BT_Wiring/README.md) for recommended wire lengths
 | Trigger to Extruder | 4mm | 3mm | 80mm | Quantity 4 ; use PTFE cutter jig |
 | Extruder to Hub (Outer lanes) | 4mm | 2mm | 171mm | Quantity 2; 3mm ID will blow out. A chamfer is recommended on each end. |
 | Extruder to Hub (Inner lanes) | 4mm | 2mm | 101mm | Quantity 2; 3mm ID will blow out. A chamfer is recommended on each end. |
+| Hub to Turtleneck | 4mm | 2mm | build dependent | A chamfer is recommended on each end. |
+| Turtleneck to toolhead | 4mm | 2-3mm | build dependent | Existing bowden tube is fine, but tighter ID can also be used. |
 
 # Initial startup guide
 Please refer to the [Initial Startup Guide](Initial_Startup.md) after completing the assembly of your BoxTurtle for next steps.
