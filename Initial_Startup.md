@@ -125,7 +125,7 @@ Suggested starting values for hotend types (more to be added later).  ``tool_stn
 ## Setting up macro variables
 
 ### A note on order of operations of macros during tool changes
-AFC will perform macros on each tool change (``T0``, ``T1``, etc) in the following order:
+AFC will perform macros (if enabled) on each tool change (``T0``, ``T1``, etc) in the following order:
 
 - Load sequence
   - If toolhead is loaded from another lane, that will first be unloaded (see below sequence)   
@@ -146,6 +146,8 @@ AFC will perform macros on each tool change (``T0``, ``T1``, etc) in the followi
 AFC has many variables that you can tweak for macros, including definition of complete custom macros to replace the stock ones. Most users will never need to touch these and they will not be covered in this guide. Below are the most common variables that will need adjusting for a stock BoxTurtle configuration with a Stealthburner/FilamATrix toolhead.
 
 For more details, please refer to the AFC-Klipper-Add-On Github docs or the comments in the ``AFC/AFC.cfg`` and ``AFC/AFC_Macro_Vars.cfg`` files.
+
+If you chosen not to enable a macro during the installation, the command will still show in mainsail, and have a configuration in AFC_Macro_Vars.cfg, but it will not be called during the load/unload sequences.
 
 #### Park
 The park macro is enabled or disabled by setting the ``park`` variable in ``AFC/AFC.cfg`` (this is prompted for during the install script, but you can change it at any time and do a firmware restart to enact the change.)
