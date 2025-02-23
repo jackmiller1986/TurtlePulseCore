@@ -68,6 +68,8 @@ After installation, please ensure sure you update the following settings:
 - In ``AFC/AFC_Hardware.cfg``
   - ``pin_tool_start`` and/or ``pin_tool_end``
 
+In your ``printer.cfg``'s ``[extruder]`` section, update the setting ``max_extrude_only_distance`` to the value 100.
+
 For best results, reboot your printer after installing the Add-On and including it in your printer.cfg.  This will ensure all required modules are enabled.
 
 ## First self-test
