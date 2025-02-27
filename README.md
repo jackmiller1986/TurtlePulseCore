@@ -106,6 +106,8 @@ Refer to [BT_Wiring/README.md](BT_Wiring/README.md) for recommended wire lengths
 
 # PTFE sizes/lengths
 
+**NOTE**: PTFE lengths between extruder to hub are suggested starting lengths - you may need to trim a little bit off in order for it to have a smooth bend. The filament path should be a smooth curve without tight corners.
+
 | Component | Outer Diameter | Inner Diameter | Length | Notes |
 |-----------|---------------|----------------|--------|--------|
 | Feeders to Trigger | 4mm | 3mm | 50mm | Quantity 4 ; use PTFE cutter jig |
