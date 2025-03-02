@@ -68,7 +68,7 @@ After installation, please ensure sure you update the following settings:
 - In ``AFC/AFC_Hardware.cfg``
   - ``pin_tool_start`` and/or ``pin_tool_end``
 
-In your ``printer.cfg``'s ``[extruder]`` section, update the setting ``max_extrude_only_distance`` to the value 100.
+In your ``printer.cfg``'s ``[extruder]`` section, update the setting ``max_extrude_only_distance`` to the value 400.
 
 For best results, reboot your printer after installing the Add-On and including it in your printer.cfg.  This will ensure all required modules are enabled.
 
@@ -122,6 +122,7 @@ Suggested starting values for hotend types (more to be added later).  ``tool_stn
 | Hotend | tool_stn | tool_stn_unload | variable_retract_length | variable_pushback_length
 | ------ | -------- | --------------- | ----------------------- | ------------------------
 | Revo Voron | 52 (if ``pin_tool_end`` is NOT defined) / 29 (if ``pin_tool_end`` is defined) | 62 | 22 | 20 |
+| Rapido V2 | 74.13 (if ``pin_tool_end`` is NOT defined) / 61.13 (if ``pin_tool_end`` is defined) | 70 | 25 | 25 |
 
 
 ## Setting up macro variables
