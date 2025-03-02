@@ -9,7 +9,7 @@ If you have an AFC-Lite v1.0 board, the USB connector faces outward in an orient
 
 ## LDO Batch 1 Kit known issues
 ### 30 Tooth MJF gear loose
-The 30 tooth MJF gears provided in the kit will likely be too loose to use as-is on the 8 x 80mm shaft. Either print the [FDM version of the gears](https://github.com/ArmoredTurtle/BoxTurtle/blob/main/STLs/Base_Build/Spooler/helical_gear_30_teeth_x4.stl) or secure the MJF gear with some glue at the appropriate position on the shaft (using the installation tool).  Ensure that any glue residue is removed that would prevent the spacer from sitting flush against the gear.
+The 30 tooth MJF gears provided in the kit will likely be too loose to use as-is on the 8 x 80mm shaft. Either print the [FDM version of the gears](https://github.com/ArmoredTurtle/BoxTurtle/blob/main/STLs/Base_Build/Spooler/helical_gear_30_teeth_x4.stl) or secure the MJF gear with some glue at the appropriate position on the shaft (using the installation tool).  Make sure to not glue the gear to the installation jig! Also ensure that any glue residue is removed that would prevent the spacer from sitting flush against the gear.
 
 ### TurtleNeck switches missing levers
 The TurtleNeck switches are missing the required metal levers, and the FilamATrix switches have levers. Follow [this guide](https://www.youtube.com/watch?v=1cHecdyxhpw) on how to migrate the switches from the FilamATrix switches to the TurtleNeck buffer switches.
