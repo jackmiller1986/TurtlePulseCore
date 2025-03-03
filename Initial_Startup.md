@@ -122,7 +122,7 @@ Suggested starting values for hotend types (more to be added later).  ``tool_stn
 | Hotend | tool_stn | tool_stn_unload | variable_retract_length | variable_pushback_length
 | ------ | -------- | --------------- | ----------------------- | ------------------------
 | Revo Voron | 52 (if ``pin_tool_end`` is NOT defined) / 29 (if ``pin_tool_end`` is defined) | 62 | 22 | 20 |
-| Rapido V2 | 74.13 (if ``pin_tool_end`` is NOT defined) / 61.13 (if ``pin_tool_end`` is defined) | 70 | 25 | 25 |
+| Rapido V2 | 74 (if ``pin_tool_end`` is NOT defined) / 52 (if ``pin_tool_end`` is defined) | 81 | 25 | 20 |
 
 
 ## Setting up macro variables
