@@ -120,6 +120,9 @@ Refer to [BT_Wiring/README.md](BT_Wiring/README.md) for recommended wire lengths
 # Initial startup guide
 Please refer to the [Initial Startup Guide](Initial_Startup.md) after completing the assembly of your BoxTurtle for next steps.
 
+# Optional Accesories
+Some optional printed accesories for your BoxTurtle build can be found on the [AFC-Accessories](https://github.com/ArmoredTurtle/AFC-Accessories) repository.
+
 # BoxTurtle sourcing/vendors
 While BoxTurtle can be mostly self-sourced, some vendors offer partial or full BoxTurtle kits. These vendors also have dedicated channels on the Armored Turtle Discord.
 
