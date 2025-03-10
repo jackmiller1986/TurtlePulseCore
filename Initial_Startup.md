@@ -313,5 +313,20 @@ If you are modifying an existing macro:
 - Lower the hotend to standby temperature with ``M104 S{S_EXTRUDER_TEMP}``
 - Perform any other necessary pre-flight tasks (e.g., heat soak, re-homing Z, bed meshing, prime/purge line, etc)
 
+## Troubleshooting
+If you get a klipper error about GSTAT Resets as in the example below:
+
+```
+TMC 'AFC_stepper lane1' reports error: GSTAT:      00000001 reset=1(Reset)
+```
+
+This may be due to static building up in the system from the PTFE tubing in dry/low humidity environments. Many users have found that running a ground wire from the stepper motor screws to a commond GND pin on the AFC-Lite board, resolves this issue. One example way to do this is below:
+
+For each motor:
+- Replace the M3x8 extruder motor mount screw with an M3x12 screw.
+- Crimp a ring connector on a wire. Place an m3 washer over the now extended motor mount screw, followed by the ring terminal, followed by an M3 hex or nyloc nut.
+
+Join the wires from all the motors into a 5 port [WAGO 221-415](https://www.wago.com/us/wire-splicing-connectors/compact-splicing-connector/p/221-415). In the 5th port, run a wire from the WAGO to any spare ground pin on the AFC-Lite board (e.g., the GND pin on RGB2).
+
 ## Time for cereal!
 If you have completed all of the above, you are ready to attempt a BoxTurtle serial (cereal) print.  The latest information on the serial print can be found on the Armored Turtle discord in the [\#serial-info](https://discord.com/channels/1229586267671629945/1282095413046022214) channel.
